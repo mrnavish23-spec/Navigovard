@@ -1,5 +1,5 @@
 const text = `
-Govardini ❤️,
+Govardhini ❤️,
 From the moment you entered my life,
 everything became more beautiful.
 You are my smile, my peace,
@@ -8,27 +8,30 @@ and my favorite part of every day 💖
 `;
 
 let index = 0;
+
 function typeEffect() {
     if (index < text.length) {
         document.getElementById("typing").innerHTML += text.charAt(index);
         index++;
-        setTimeout(typeEffect, 45);
+        setTimeout(typeEffect, 40);
     }
 }
 typeEffect();
 
 function showProposal() {
-    document.getElementById("proposal").style.display = "block";
+    document.getElementById("proposal").classList.remove("hidden");
 }
 
 function yesLove() {
-    document.getElementById("proposal").style.display = "none";
-    document.getElementById("final").style.display = "block";
+    document.getElementById("proposal").classList.add("hidden");
+    document.getElementById("final").classList.remove("hidden");
 }
 
 function moveNo() {
     const btn = document.querySelector(".no");
+    const x = Math.random() * 60;
+    const y = Math.random() * 60;
     btn.style.position = "absolute";
-    btn.style.left = Math.random() * 70 + "%";
-    btn.style.top = Math.random() * 70 + "%";
+    btn.style.left = x + "%";
+    btn.style.top = y + "%";
 }
