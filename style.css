@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff5fa2, #ff8dc7);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255,255,255,0.2);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    max-width: 520px;
+}
+
+h1 { font-size: 2.6rem; }
+h2 { margin-top: 10px; }
+
+p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    min-height: 90px;
+}
+
+button {
+    background: #ff2e63;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.12);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.yes {
+    background: #00c897;
+}
+
+.no {
+    background: #ff165d;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Heart rain */
+.hearts::before {
+    content: "💖 💕 💘 💞 💓 ❤️";
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    animation: float 6s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}
